@@ -1,14 +1,12 @@
 ---
 layout: default
-category: all
 ---
-<div id="home">
-  <h1>Pathfinder</h1>
-  <ul class="posts">
-    {% if page.category == 'all' %}
-        {% include posts.html %}
-    {% else %}
-        {% include category.html %}
-    {% endif %}
-  </ul>
-</div>
+<h2>{{ page.title }}</h2>
+
+<ul class="posts">
+{% if page.category %}
+    {% include category.html %}
+{% else %}
+    {% include posts.html %}
+{% endif %}
+</ul>

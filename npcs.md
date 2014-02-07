@@ -1,5 +1,5 @@
 ---
 layout: list
-title: Campaign Notes | NPCs
+title: NPCs
 category: npc
 ---
