@@ -1,4 +1,4 @@
 ---
 layout: list
-title: Pathfinder
+title: Home
 ---
