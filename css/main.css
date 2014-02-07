@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+
 /*****************************************************************************/
 /*
 /* Common
@@ -13,10 +15,11 @@
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
-  font: 13.34px Helvetica, Arial, sans-serif;
-  font-size: small;
+  background-color: #fdf6e3;
+  font-family: 'Lora', serif;
+  font-size: 16px;
   text-align: center;
+  color: #586e75;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -25,9 +28,9 @@ h1, h2, h3, h4, h5, h6 {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
+a         { color: #b58900; }
+a:hover   { color: #586e75; }
+a:visited { color: #b58900; }
 
 /*****************************************************************************/
 /*
@@ -44,7 +47,7 @@ a:visited { color: #a0a; }
 }
 
 .posts span {
-  color: #aaa;
+  color: #93a1a1;
   font-family: Monaco, "Courier New", monospace;
   font-size: 80%;
 }
@@ -74,30 +77,31 @@ a:visited { color: #a0a; }
 }
 
 .title a {
-  color: #a00;
+  color: #cb4b16;
+
 }
 
 .title a:hover {
-  color: #000;
+  color: #586e75;
 }
 
 .header a.extra {
-  color: #aaa;
+  color: #93a1a1;
   margin-left: 1em;
 }
 
 .header a.extra:hover {
-  color: #000;
+  color: #586e75;
 }
 
 .meta {
-  color: #aaa;
+  color: #93a1a1;
 }
 
 .footer {
   font-size: 80%;
-  color: #666;
-  border-top: 4px solid #eee;
+  color: #839496;
+  border-top: 4px solid #eee8d5;
   margin-top: 2em;
   overflow: hidden;
 }
