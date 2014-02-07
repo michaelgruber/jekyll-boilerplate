@@ -1,3 +1,4 @@
 name: Campaign Notes
 markdown: redcarpet
 pygments: true
+exclude: [README.md]
