@@ -1,4 +1,4 @@
-name: Campaign Notes
+name: Jekyll Boilerplate
 markdown: redcarpet
 pygments: true
 exclude: [README.md]
