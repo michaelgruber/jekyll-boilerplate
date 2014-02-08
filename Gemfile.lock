@@ -58,6 +58,7 @@ GEM
     redcarpet (2.3.0)
     ref (1.0.5)
     safe_yaml (0.9.7)
+    sass (3.2.14)
     therubyracer (0.12.1)
       libv8 (~> 3.16.14.0)
       ref
@@ -72,4 +73,5 @@ DEPENDENCIES
   coffee-script
   github-pages
   jekyll
+  sass
   therubyracer

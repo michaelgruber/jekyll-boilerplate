@@ -5,3 +5,5 @@ gem 'github-pages'
 
 gem 'therubyracer'
 gem 'coffee-script'
+
+gem 'sass'
