@@ -18,9 +18,7 @@
             <div class="site">
                 <div class="header">
                     <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-                    {% for page in site.pages %}
-                        <a href="{{ page.url }}" class="extra">{{ page.title | downcase}}</a>
-                    {% endfor %}
+                    {% include navigation.html %}
                 </div>
 
                 {{ content }}
