@@ -1,41 +1,62 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+
+//
+// FONTS
+//
+$serif: 'Lora', serif;
+$mono: Monaco, "Courier New", monospace;
+
+//
+// COLORS
+//
+$base03: #002b36;
+$base02: #073642;
+$base01: #586e75;
+$base00: #657b83;
+$base0: #839496;
+$base1: #93a1a1;
+$base2: #eee8d5;
+$base3: #fdf6e3;
+$yellow: #b58900;
+$orange: #cb4b16;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
+
 /*****************************************************************************/
 /*
 /* Common
 /*
 /*****************************************************************************/
+
 /* Global Reset */
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
-html, body {
-  height: 100%; }
+html, body { height: 100%; }
 
 body {
-  background-color: #fdf6e3;
-  font-family: "Lora", serif;
+  background-color: $base3;
+  font-family: $serif;
   font-size: 16px;
   text-align: center;
-  color: #586e75; }
+  color: $base01;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
-h1 {
-  margin-bottom: 1em; }
+h1 { margin-bottom: 1em; }
+p { margin: 1em 0; }
 
-p {
-  margin: 1em 0; }
-
-a {
-  color: #b58900; }
-
-a:hover {
-  color: #586e75; }
-
-a:visited {
-  color: #b58900; }
+a         { color: $yellow; }
+a:hover   { color: $base01; }
+a:visited { color: $yellow; }
 
 /*****************************************************************************/
 /*
@@ -44,97 +65,121 @@ a:visited {
 /*****************************************************************************/
 .posts {
   list-style-type: none;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+}
 
 .posts li {
-  line-height: 1.75em; }
+  line-height: 1.75em;
+}
 
 .posts span {
-  color: #93a1a1;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%; }
+  color: $base1;
+  font-family: $mono;
+  font-size: 80%;
+}
 
 /*****************************************************************************/
 /*
 /* Site
 /*
 /*****************************************************************************/
+
 .site {
   font-size: 115%;
   text-align: justify;
   width: 42em;
   margin: 3em auto 2em;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
 
 .header a {
   font-weight: bold;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .title {
   display: inline-block;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+}
 
 .title a {
-  color: #cb4b16; }
+  color: $orange;
+
+}
 
 .title a:hover {
-  color: #586e75; }
+  color: $base01;
+}
 
 .header a.extra {
-  color: #93a1a1;
-  margin-left: 1em; }
+  color: $base1;
+  margin-left: 1em;
+}
 
 .header a.extra:hover {
-  color: #586e75; }
+  color: $base01;
+}
 
 .meta {
-  color: #93a1a1; }
+  color: $base1;
+}
 
 .footer {
   font-size: 80%;
-  color: #839496;
-  border-top: 4px solid #eee8d5;
+  color: $base0;
+  border-top: 4px solid $base2;
   margin-top: 2em;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .footer .contact {
   float: left;
-  margin-right: 3em; }
+  margin-right: 3em;
+}
 
 .footer .rss {
   margin-top: 1.1em;
   margin-right: -.2em;
-  float: right; }
+  float: right;
+}
 
 .footer .rss img {
-  border: 0; }
+  border: 0;
+}
 
 /*****************************************************************************/
 /*
 /* Posts
 /*
 /*****************************************************************************/
+
 /* standard */
 .post pre {
-  border: 1px solid #eee8d5;
-  background-color: #002b36;
-  padding: 0 .4em; }
+  border: 1px solid $base2;
+  background-color: $base03;
+  padding: 0 .4em;
+}
 
 .post ul, .post ol {
-  margin-left: 1.35em; }
+  margin-left: 1.35em;
+}
 
 .post code {
-  border: 1px solid #eee8d5;
-  background-color: #002b36;
-  padding: 0 .2em; }
+  border: 1px solid $base2;
+  background-color: $base03;
+  padding: 0 .2em;
+}
 
 .post pre code {
-  border: none; }
+  border: none;
+}
 
 /* terminal */
 .post pre.terminal {
-  border: 1px solid #eee8d5;
-  background-color: #002b36; }
+  border: 1px solid $base2;
+  background-color: $base03;
+}
 
 .post pre.terminal code {
-  background-color: #002b36; }
+  background-color: $base03;
+}
