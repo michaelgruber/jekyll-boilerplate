@@ -9,18 +9,16 @@
   margin: 0;
   padding: 0; }
 
-html, body {
-  height: 100%; }
-
-body {
-  background-color: #fdf6e3;
-  font-family: "Lora", serif;
-  font-size: 16px;
-  text-align: center;
-  color: #586e75; }
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%; }
+html {
+  font-size: 16px; }
+  html body {
+    font-size: 62.5%;
+    /* 1em = 10px */
+    height: 100%;
+    background-color: #fdf6e3;
+    font-family: "Lora", serif;
+    text-align: center;
+    color: #586e75; }
 
 h1 {
   margin-bottom: 1em; }
@@ -37,6 +35,18 @@ a:hover {
 a:visited {
   color: #b58900; }
 
+.site {
+  font-size: large;
+  width: 900px; }
+
+@media (max-width: 1000px) {
+  .site {
+    font-size: medium;
+    width: 80%; } }
+@media (max-width: 500px) {
+  .site {
+    font-size: small;
+    width: 95%; } }
 /*****************************************************************************/
 /*
 /* Home
@@ -51,8 +61,7 @@ a:visited {
 
 .posts span {
   color: #93a1a1;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%; }
+  font-family: Monaco, "Courier New", monospace; }
 
 /*****************************************************************************/
 /*
@@ -60,9 +69,7 @@ a:visited {
 /*
 /*****************************************************************************/
 .site {
-  font-size: 115%;
   text-align: justify;
-  width: 42em;
   margin: 3em auto 2em;
   line-height: 1.5em; }
 
@@ -91,7 +98,6 @@ a:visited {
   color: #93a1a1; }
 
 .footer {
-  font-size: 80%;
   color: #839496;
   border-top: 4px solid #eee8d5;
   margin-top: 2em;
