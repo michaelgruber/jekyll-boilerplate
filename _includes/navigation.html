@@ -1,5 +1,7 @@
-{% for page in site.pages %}
-    {% if page.url != '/index.html' %}
-        <a href="{{ page.url }}" class="extra">{{ page.title | downcase}}</a>
-    {% endif %}
-{% endfor %}
+<ul>
+    {% for page in site.pages %}
+        {% if page.url != '/index.html' %}
+            <li><a href="{{ page.url }}">{{ page.title | downcase}}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>

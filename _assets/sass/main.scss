@@ -39,7 +39,7 @@ $green: #859900;
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 
   body {
     font-size: 62.5%; /* 1em = 10px */
@@ -54,26 +54,18 @@ html {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a         { color: $yellow; }
-a:hover   { color: $base01; }
-a:visited { color: $yellow; }
+a, a:visited { color: $yellow; }
+a:hover { color: $base01; }
 
 //
 // MEDIA QUERIES
 //
 .site {
   font-size: large;
-  width: 900px;
+  width: 600px;
 }
-@media (max-width: 1000px) {
+@media (max-width: 650px) {
   .site {
-    font-size: medium;
-    width: 80%;
-  }
-}
-@media (max-width: 500px) {
-  .site {
-    font-size: small;
     width: 95%;
   }
 }
@@ -105,36 +97,53 @@ a:visited { color: $yellow; }
 
 .site {
   text-align: justify;
-  margin: 3em auto 2em;
+  margin: 1em auto 2em;
   line-height: 1.5em;
 }
 
-.header a {
+header a, nav a {
   font-weight: bold;
   text-decoration: none;
 }
 
-.title {
-  display: inline-block;
-  margin-bottom: 2em;
+header {
+  margin: 4em 0 0 0;
+
+  .title {
+    display: inline-block;
+  }
+
+  .title a, .title a:visited {
+    color: $orange;
+
+  }
+
+  .title a:hover {
+    color: $base01;
+  }
 }
 
-.title a {
-  color: $orange;
+nav {
+  height: 1.8em;
 
-}
+  ul {
+    float: right;
+    display: block;
 
-.title a:hover {
-  color: $base01;
-}
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
 
-.header a.extra {
-  color: $base1;
-  margin-left: 1em;
-}
+  a, a:visited {
+    color: $base1;
+    margin-left: 1em;
+  }
 
-.header a.extra:hover {
-  color: $base01;
+  a:hover {
+    color: $base01;
+  }
 }
 
 .meta {

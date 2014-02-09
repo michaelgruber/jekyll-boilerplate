@@ -16,10 +16,11 @@
         <body>
 
             <div class="site">
-                <div class="header">
+                <nav role="navigation">{% include navigation.html %}</nav>
+
+                <header>
                     <h1 class="title"><a href="/">{{ site.name }}</a></h1>
-                    {% include navigation.html %}
-                </div>
+                </header>
 
                 {{ content }}
 
