@@ -54,8 +54,10 @@ html {
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
-a, a:visited { color: $yellow; }
-a:hover { color: $base01; }
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: $base01;
+}
 
 //
 // MEDIA QUERIES
@@ -107,7 +109,7 @@ header a, nav a {
 }
 
 header {
-  margin: 4em 0 0 0;
+  margin: 3em 0 0 0;
 
   .title {
     display: inline-block;
@@ -150,26 +152,36 @@ nav {
   color: $base1;
 }
 
-.footer {
+footer {
   color: $base0;
   border-top: 4px solid $base2;
   margin-top: 2em;
   overflow: hidden;
+
+  .contact {
+    float: left;
+    margin-right: 3em;
+  }
+  .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right;
+
+    img {
+      border: 0;
+    }
+  }
 }
 
-.footer .contact {
-  float: left;
-  margin-right: 3em;
-}
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right;
-}
-
-.footer .rss img {
-  border: 0;
+//
+// ARTICLE
+//
+article {
+  a { border-bottom: 2px solid $base2; }
+  a:hover {
+    color: $blue;
+    border-bottom: 2px solid $blue;
+  }
 }
 
 /*****************************************************************************/

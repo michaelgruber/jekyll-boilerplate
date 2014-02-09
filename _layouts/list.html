@@ -3,12 +3,13 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 
-<div class="intro">
+<section class="intro">
 {{ content }}
-</div>
+</section>
 
-<ul class="posts">
+
 <h3>{{ page.list_name }}</h3>
+<ul class="posts">
 {% if page.category %}
     {% include category.html %}
 {% else %}

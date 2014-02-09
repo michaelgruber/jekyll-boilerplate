@@ -10,7 +10,7 @@
   padding: 0; }
 
 html {
-  font-size: 16px; }
+  font-size: 18px; }
   html body {
     font-size: 62.5%;
     /* 1em = 10px */
@@ -26,26 +26,16 @@ h1 {
 p {
   margin: 1em 0; }
 
-a {
-  color: #b58900; }
-
-a:hover {
+a, a:visited, a:hover {
+  text-decoration: none;
   color: #586e75; }
-
-a:visited {
-  color: #b58900; }
 
 .site {
   font-size: large;
-  width: 900px; }
+  width: 600px; }
 
-@media (max-width: 1000px) {
+@media (max-width: 650px) {
   .site {
-    font-size: medium;
-    width: 80%; } }
-@media (max-width: 500px) {
-  .site {
-    font-size: small;
     width: 95%; } }
 /*****************************************************************************/
 /*
@@ -70,50 +60,59 @@ a:visited {
 /*****************************************************************************/
 .site {
   text-align: justify;
-  margin: 3em auto 2em;
+  margin: 1em auto 2em;
   line-height: 1.5em; }
 
-.header a {
+header a, nav a {
   font-weight: bold;
   text-decoration: none; }
 
-.title {
-  display: inline-block;
-  margin-bottom: 2em; }
+header {
+  margin: 3em 0 0 0; }
+  header .title {
+    display: inline-block; }
+  header .title a, header .title a:visited {
+    color: #cb4b16; }
+  header .title a:hover {
+    color: #586e75; }
 
-.title a {
-  color: #cb4b16; }
-
-.title a:hover {
-  color: #586e75; }
-
-.header a.extra {
-  color: #93a1a1;
-  margin-left: 1em; }
-
-.header a.extra:hover {
-  color: #586e75; }
+nav {
+  height: 1.8em; }
+  nav ul {
+    float: right;
+    display: block; }
+    nav ul li {
+      list-style: none;
+      display: inline-block; }
+  nav a, nav a:visited {
+    color: #93a1a1;
+    margin-left: 1em; }
+  nav a:hover {
+    color: #586e75; }
 
 .meta {
   color: #93a1a1; }
 
-.footer {
+footer {
   color: #839496;
   border-top: 4px solid #eee8d5;
   margin-top: 2em;
   overflow: hidden; }
+  footer .contact {
+    float: left;
+    margin-right: 3em; }
+  footer .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right; }
+    footer .rss img {
+      border: 0; }
 
-.footer .contact {
-  float: left;
-  margin-right: 3em; }
-
-.footer .rss {
-  margin-top: 1.1em;
-  margin-right: -.2em;
-  float: right; }
-
-.footer .rss img {
-  border: 0; }
+article a {
+  border-bottom: 2px solid #eee8d5; }
+article a:hover {
+  color: #268bd2;
+  border-bottom: 2px solid #268bd2; }
 
 /*****************************************************************************/
 /*
