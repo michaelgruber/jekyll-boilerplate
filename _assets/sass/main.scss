@@ -26,17 +26,21 @@ $blue: #268bd2;
 $cyan: #2aa198;
 $green: #859900;
 
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
+
+
+//
+// GENERAL
+//
 
 /* Global Reset */
 * {
   margin: 0;
   padding: 0;
 }
+
+h1 { margin-bottom: 1em; }
+h2 { margin-bottom: 0.5em; }
+h3 { margin-bottom: 0.25em; }
 
 html {
   font-size: 18px;
@@ -59,6 +63,11 @@ a, a:visited, a:hover {
   color: $base01;
 }
 
+.date {
+  font-weight: bold;
+  color: $base1;
+}
+
 //
 // MEDIA QUERIES
 //
@@ -77,18 +86,21 @@ a, a:visited, a:hover {
 /* Home
 /*
 /*****************************************************************************/
+
 .posts {
+  border-bottom: 1px dotted $base2;
   list-style-type: none;
   margin-bottom: 2em;
-}
 
-.posts li {
-  line-height: 1.75em;
-}
+  li {
+    line-height: 1.75em;
+    padding: 0.5em 0;
+    border-top: 1px dotted $base2;
 
-.posts span {
-  color: $base1;
-  font-family: $mono;
+    .date {
+      float: right;
+    }
+  }
 }
 
 /*****************************************************************************/
@@ -177,6 +189,15 @@ footer {
 // ARTICLE
 //
 article {
+
+  header {
+    margin: 0 0 1em 0;
+
+    .date {
+      float: right;
+    }
+  }
+
   a { border-bottom: 2px solid $base2; }
   a:hover {
     color: $blue;

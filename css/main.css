@@ -1,13 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
 /* Global Reset */
 * {
   margin: 0;
   padding: 0; }
+
+h1 {
+  margin-bottom: 1em; }
+
+h2 {
+  margin-bottom: 0.5em; }
+
+h3 {
+  margin-bottom: 0.25em; }
 
 html {
   font-size: 18px; }
@@ -30,6 +34,10 @@ a, a:visited, a:hover {
   text-decoration: none;
   color: #586e75; }
 
+.date {
+  font-weight: bold;
+  color: #93a1a1; }
+
 .site {
   font-size: large;
   width: 600px; }
@@ -43,15 +51,15 @@ a, a:visited, a:hover {
 /*
 /*****************************************************************************/
 .posts {
+  border-bottom: 1px dotted #eee8d5;
   list-style-type: none;
   margin-bottom: 2em; }
-
-.posts li {
-  line-height: 1.75em; }
-
-.posts span {
-  color: #93a1a1;
-  font-family: Monaco, "Courier New", monospace; }
+  .posts li {
+    line-height: 1.75em;
+    padding: 0.5em 0;
+    border-top: 1px dotted #eee8d5; }
+    .posts li .date {
+      float: right; }
 
 /*****************************************************************************/
 /*
@@ -108,6 +116,10 @@ footer {
     footer .rss img {
       border: 0; }
 
+article header {
+  margin: 0 0 1em 0; }
+  article header .date {
+    float: right; }
 article a {
   border-bottom: 2px solid #eee8d5; }
 article a:hover {
