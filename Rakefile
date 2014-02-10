@@ -7,6 +7,8 @@ task :compile do
 end
 
 def compile_sass
+  print 'Compiling SASS... '
+
   input = "#{ File.dirname(__FILE__) }/_assets/sass/"
   output = "#{ File.dirname(__FILE__) }/css/"
 
@@ -15,9 +17,13 @@ def compile_sass
       system("bundle exec sass #{ input }#{ file } #{ output }#{ file.gsub('.scss', '.css') }")
     end
   end
+
+  puts 'done.'
 end
 
 def compile_coffee
+  print 'Compiling CoffeeScript... '
+
   input = "#{ File.dirname(__FILE__) }/_assets/scripts/"
   output = "#{ File.dirname(__FILE__) }/js/"
 
@@ -29,4 +35,6 @@ def compile_coffee
       end
     end
   end
+
+  puts 'done.'
 end
