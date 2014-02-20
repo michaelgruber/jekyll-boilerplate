@@ -4,7 +4,4 @@ gem 'jekyll'
 gem 'github-pages'
 gem 'rake'
 
-gem 'therubyracer'
-gem 'coffee-script'
-
 gem 'sass'
