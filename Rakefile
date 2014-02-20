@@ -1,17 +1,31 @@
+INPUT = "#{ File.dirname(__FILE__) }/_assets/sass/"
+OUTPUT = "#{ File.dirname(__FILE__) }/css/"
+
 desc "compile sass from ./_assets/sass to ./css"
-task :compile do
+task :build do
   compile_sass
+  system "jekyll build"
+end
+
+
+desc "watch all files for changes"
+multitask watch: ['watch:sass', 'watch:jekyll']
+namespace :watch do
+  task :sass do
+    system "bundle exec sass --watch #{ INPUT }:#{ OUTPUT }"
+  end
+
+  task :jekyll do
+    system "bundle exec jekyll serve --watch"
+  end
 end
 
 def compile_sass
   print 'Compiling SASS... '
 
-  input = "#{ File.dirname(__FILE__) }/_assets/sass/"
-  output = "#{ File.dirname(__FILE__) }/css/"
-
-  Dir.foreach(input) do |file|
+  Dir.foreach(INPUT) do |file|
     unless file == '.' || file == '..'
-      system("bundle exec sass #{ input }#{ file } #{ output }#{ file.gsub('.scss', '.css') }")
+      system "bundle exec sass #{ INPUT }#{ file } #{ OUTPUT }#{ file.gsub('.scss', '.css') }"
     end
   end
 
