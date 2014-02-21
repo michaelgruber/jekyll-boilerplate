@@ -22,9 +22,26 @@ body {
 //
 // MEDIA QUERIES
 //
-@media (max-width: 650px) {
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+
   .site {
-    width: 95%;
+    width: 700px;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 55%;
+    p {
+      font-size: 115%;
+    }
+  }
+  .site {
+    width: 90%;
   }
 }
 
