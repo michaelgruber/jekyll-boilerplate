@@ -24,7 +24,7 @@ def compile_sass
   print 'Compiling SASS... '
 
   Dir.foreach(INPUT) do |file|
-    unless file == '.' || file == '..'
+    unless file == '.' || file == '..' || file[0] == '_'
       system "bundle exec sass #{ INPUT }#{ file } #{ OUTPUT }#{ file.gsub('.scss', '.css') }"
     end
   end
