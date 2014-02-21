@@ -1,45 +1,10 @@
 @import "colors";
 @import "fonts";
 
-//
-// MEDIA QUERIES
-//
-@media (max-width: 650px) {
-  .site {
-    width: 95%;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
 }
-
-
-//
-// HOME
-//
-.date {
-  font-weight: bold;
-  color: $base1;
-}
-
-.posts {
-  border-bottom: 1px dotted $base2;
-  list-style-type: none;
-  margin-bottom: 2em;
-
-  li {
-    line-height: 1.75em;
-    padding: 0.5em 0;
-    border-top: 1px dotted $base2;
-
-    .date {
-      float: right;
-    }
-  }
-}
-
 
 //
 // SITE
@@ -51,6 +16,16 @@ body {
 
 .meta {
   color: $base1;
+}
+
+
+//
+// MEDIA QUERIES
+//
+@media (max-width: 650px) {
+  .site {
+    width: 95%;
+  }
 }
 
 
@@ -155,6 +130,14 @@ footer {
   }
 }
 
+article.post {
+  img { 
+    float: right;
+    max-width: 50%;
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+}
+
 .intro > p:first-child { margin-top: 0; }
 
 .posts-list {
@@ -165,12 +148,16 @@ footer {
   }
 
   .posts {
+    border-bottom: 1px dotted $base2;
     padding-left: 0;
-    margin: 0;
+    margin: 0 0 2em 0;
+    line-height: 1.75em;
 
     .posts-item {
       margin: 0;
       padding: 3em 0;
+      border-top: 1px dotted $base2;
+      list-style: none;
 
       a, a:hover, a:visited { 
         border: none;
@@ -182,9 +169,8 @@ footer {
         margin: 0;
       }
 
-      .posts-item-subtitle {
-        font-weight: normal;
-        margin: 0;
+      .posts-item-excerpt {
+        margin: 0.5em 0;
       }
 
       .posts-item-date {
