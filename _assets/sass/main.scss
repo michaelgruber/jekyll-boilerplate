@@ -1,91 +1,28 @@
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
-
-//
-// FONTS
-//
-$serif: 'Lora', serif;
-$mono: Monaco, "Courier New", monospace;
-
-//
-// COLORS
-//
-$base03: #002b36;
-$base02: #073642;
-$base01: #586e75;
-$base00: #657b83;
-$base0: #839496;
-$base1: #93a1a1;
-$base2: #eee8d5;
-$base3: #fdf6e3;
-$yellow: #b58900;
-$orange: #cb4b16;
-$red: #dc322f;
-$magenta: #d33682;
-$violet: #6c71c4;
-$blue: #268bd2;
-$cyan: #2aa198;
-$green: #859900;
-
-
-
-//
-// GENERAL
-//
-
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-h1 { margin-bottom: 1em; }
-h2 { margin-bottom: 0.5em; }
-h3 { margin-bottom: 0.25em; }
-
-html {
-  font-size: 18px;
-
-  body {
-    font-size: 62.5%; /* 1em = 10px */
-    height: 100%;
-    background-color: $base3;
-    font-family: $serif;
-    text-align: center;
-    color: $base01;
-  }
-}
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a, a:visited, a:hover {
-  text-decoration: none;
-  color: $base01;
-}
-
-.date {
-  font-weight: bold;
-  color: $base1;
-}
+@import "colors";
+@import "fonts";
 
 //
 // MEDIA QUERIES
 //
-.site {
-  font-size: large;
-  width: 600px;
-}
 @media (max-width: 650px) {
   .site {
     width: 95%;
   }
 }
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+//
+// HOME
+//
+.date {
+  font-weight: bold;
+  color: $base1;
+}
 
 .posts {
   border-bottom: 1px dotted $base2;
@@ -103,41 +40,51 @@ a, a:visited, a:hover {
   }
 }
 
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
 
+//
+// SITE
+//
 .site {
-  text-align: justify;
-  margin: 1em auto 2em;
-  line-height: 1.5em;
+  width: 600px;
+  margin: 0 auto;
 }
 
-header a, nav a {
-  font-weight: bold;
-  text-decoration: none;
+.meta {
+  color: $base1;
+}
+
+
+//
+// HEADER
+//
+header, nav {
+  a, a:hover, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+  }
 }
 
 header {
-  margin: 3em 0 0 0;
-
   .title {
     display: inline-block;
-  }
 
-  .title a, .title a:visited {
-    color: $orange;
+    a, a:visited {
+      color: $orange;
+    }
 
-  }
-
-  .title a:hover {
-    color: $base01;
+    a:hover {
+      color: $base01;
+    }
   }
 }
 
+
+//
+// NAV
+//
 nav {
+  @include font-size(1.8);
   height: 1.8em;
 
   ul {
@@ -160,10 +107,10 @@ nav {
   }
 }
 
-.meta {
-  color: $base1;
-}
 
+//
+// FOOTER
+//
 footer {
   color: $base0;
   border-top: 4px solid $base2;
@@ -174,6 +121,7 @@ footer {
     float: left;
     margin-right: 3em;
   }
+
   .rss {
     margin-top: 1.1em;
     margin-right: -.2em;
@@ -186,58 +134,66 @@ footer {
 }
 
 //
-// ARTICLE
+// CONTENT
 //
-article {
+.post-header, .page-header {
+  .post-title, .page-title {
+    margin: 0;
+    @include font-size(4.8);
+  }
 
-  header {
-    margin: 0 0 1em 0;
+  .post-subtitle {
+    margin: 0;
+    font-weight: normal;
+    @include font-size(2.4);
+    border: none;
+  }
 
-    .date {
-      float: right;
+  .post-date {
+    @include font-size(1.4);
+    color: $base1;
+  }
+}
+
+.intro > p:first-child { margin-top: 0; }
+
+.posts-list {
+  .posts-list-name {
+    border: none;
+    margin-bottom: 0;
+    @include font-size(3.2);
+  }
+
+  .posts {
+    padding-left: 0;
+    margin: 0;
+
+    .posts-item {
+      margin: 0;
+      padding: 3em 0;
+
+      a, a:hover, a:visited { 
+        border: none;
+        color: $base01;
+      }
+
+      .posts-item-title {
+        border: none;
+        margin: 0;
+      }
+
+      .posts-item-subtitle {
+        font-weight: normal;
+        margin: 0;
+      }
+
+      .posts-item-date {
+        @include font-size(1.4);
+
+        a, a:hover, a:visited {
+          color: $base1;
+        }
+      }
     }
   }
-
-  a { border-bottom: 2px solid $base2; }
-  a:hover {
-    color: $blue;
-    border-bottom: 2px solid $blue;
-  }
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-/* standard */
-.post pre {
-  border: 1px solid $base2;
-  background-color: $base03;
-  padding: 0 .4em;
-}
-
-.post ul, .post ol {
-  margin-left: 1.35em;
-}
-
-.post code {
-  border: 1px solid $base2;
-  background-color: $base03;
-  padding: 0 .2em;
-}
-
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid $base2;
-  background-color: $base03;
-}
-
-.post pre.terminal code {
-  background-color: $base03;
 }

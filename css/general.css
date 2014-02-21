@@ -1,0 +1,226 @@
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  /* Sets up base 10 for font size */ }
+
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-family: "Lora", serif;
+  line-height: 1.6;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #fdf6e3;
+  padding: 3em;
+  color: #586e75; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a, a:hover, a:visited {
+  color: #586e75;
+  padding: 0.2em 0;
+  border-bottom: 0.2em solid #eee8d5;
+  text-decoration: none; }
+
+a:hover {
+  color: #268bd2;
+  border-bottom: 0.2em solid #268bd2; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 2em 0 1em;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  font-size: 2.8rem; }
+
+h2 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  border-bottom: 0.1em solid #eee8d5; }
+
+h3 {
+  font-size: 18px;
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 16px;
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+h6 {
+  color: #839496;
+  font-size: 14px;
+  font-size: 1.4rem; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 1.5em 0; }
+
+hr {
+  background: none;
+  border: 0;
+  border-bottom: 0.4em solid #eee8d5; }
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+body > h1:first-child + h2 {
+  margin-top: 0;
+  padding-top: 0; }
+
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+ul, ol {
+  padding-left: 3em; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0; }
+
+dl {
+  padding: 0; }
+
+dl dt {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 1.5em 0 0.5em; }
+
+dl dt:first-child {
+  padding: 0; }
+
+dl dt > :first-child {
+  margin-top: 0; }
+
+dl dt > :last-child {
+  margin-bottom: 0; }
+
+dl dd {
+  margin: 0 0 1.5em;
+  padding: 0 1.5em; }
+
+dl dd > :first-child {
+  margin-top: 0; }
+
+dl dd > :last-child {
+  margin-bottom: 0; }
+
+blockquote {
+  border-left: 0.4em solid #eee8d5;
+  padding: 0 1.5em;
+  color: #839496; }
+
+blockquote > :first-child {
+  margin-top: 0; }
+
+blockquote > :last-child {
+  margin-bottom: 0; }
+
+table {
+  border-collapse: collapse;
+  padding: 0; }
+
+table tr {
+  border-top: 0.1em dotted #93a1a1;
+  margin: 0;
+  padding: 0; }
+
+table tr:nth-child(2n) {
+  background-color: #eee8d5; }
+
+table tr th {
+  font-weight: bold;
+  border: 0.1em dotted #93a1a1;
+  text-align: left;
+  margin: 0;
+  padding: 0.6em 1.3em; }
+
+table tr td {
+  border: 0.1em dotted #93a1a1;
+  text-align: left;
+  margin: 0;
+  padding: 0.6em 1.3em; }
+
+table tr th :first-child, table tr td :first-child {
+  margin-top: 0; }
+
+table tr th :last-child, table tr td :last-child {
+  margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+pre {
+  font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+  background-color: #eee8d5;
+  color: #586e75;
+  overflow: auto;
+  padding: 0.6em 1em; }
+  pre code {
+    margin: 0;
+    padding: 0;
+    white-space: pre;
+    border: none;
+    background: transparent; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+code, tt {
+  font-family: Menlo, Consolas, "Liberation Mono", Courier, monospace;
+  margin: 0 0.2em;
+  padding: 0 0.5em;
+  white-space: nowrap;
+  background-color: #eee8d5;
+  color: #586e75; }

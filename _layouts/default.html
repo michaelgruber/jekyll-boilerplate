@@ -6,13 +6,16 @@
         <title>{{ site.name }} | {{ page.title }}</title>
         <meta name="viewport" content="width=device-width">
 
-        <!-- syntax highlighting CSS -->
+        <!-- Syntax highlighting CSS -->
         <link rel="stylesheet" href="/css/syntax.css">
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
+        <!-- General styles -->
+        <link rel="stylesheet" href="/css/general.css">
 
+        <!-- Custom CSS and overrides -->
+        <link rel="stylesheet" href="/css/main.css">
     </head>
+
         <body>
 
             <div class="site">
@@ -22,9 +25,9 @@
                     <h1 class="title"><a href="/">{{ site.name }}</a></h1>
                 </header>
 
-                <article>
+                <div class="content">
                     {{ content }}
-                </article>
+                </div>
 
                 <footer>
                     {% include footer.html %}
