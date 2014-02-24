@@ -13,7 +13,9 @@ layout: page
     {% endif %}
 
     <ul class="posts">
-        {% if page.category %}
+        {% if page.paginate %}
+          {% include paginated_posts.html %}
+        {% elsif page.category %}
             {% include category_posts.html %}
         {% else %}
             {% include all_posts.html %}

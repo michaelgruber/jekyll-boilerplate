@@ -1,7 +1,7 @@
 <ul>
     {% for page in site.pages %}
-        {% if page.url != '/index.html' %}
+        {% unless page.url contains 'index.html' %}
             <li><a href="{{ page.url }}">{{ page.title | downcase}}</a></li>
-        {% endif %}
+        {% endunless %}
     {% endfor %}
 </ul>

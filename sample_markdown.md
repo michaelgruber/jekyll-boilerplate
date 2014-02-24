@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Home
+title: Sample Markdown
 ---
 
 GitHub Flavored Markdown

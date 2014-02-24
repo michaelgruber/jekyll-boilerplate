@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: Sample List Page
+title: Sample Category Page
 list_name: Archive
 ---
 

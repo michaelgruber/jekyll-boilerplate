@@ -22,7 +22,6 @@ body {
 //
 // MEDIA QUERIES
 //
-
 @media (min-width: 1024px) {
   html {
     font-size: 70%;
@@ -49,7 +48,7 @@ body {
 //
 // HEADER
 //
-header, nav {
+.site-header, .site-nav {
   a, a:hover, a:visited {
     font-weight: bold;
     text-decoration: none;
@@ -57,7 +56,7 @@ header, nav {
   }
 }
 
-header {
+.site-header {
   .title {
     display: inline-block;
 
@@ -82,10 +81,13 @@ header {
   ul {
     float: right;
     display: block;
+    margin: 0.25em 0;
+    padding: 0;
 
     li {
       list-style: none;
       display: inline-block;
+      margin: 0;
     }
   }
 
