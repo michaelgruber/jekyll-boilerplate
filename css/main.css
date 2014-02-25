@@ -99,14 +99,14 @@ article.post img {
   font-size: 32px;
   font-size: 3.2rem; }
 .posts-list .posts {
-  border-bottom: 1px dotted #eee8d5;
+  border-top: 1px dotted #eee8d5;
   padding-left: 0;
   margin: 0 0 2em 0;
   line-height: 1.75em; }
   .posts-list .posts .posts-item {
     margin: 0;
     padding: 3em 0;
-    border-top: 1px dotted #eee8d5;
+    border-bottom: 1px dotted #eee8d5;
     list-style: none; }
     .posts-list .posts .posts-item a, .posts-list .posts .posts-item a:hover, .posts-list .posts .posts-item a:visited {
       border: none;
@@ -121,3 +121,9 @@ article.post img {
       font-size: 1.4rem; }
       .posts-list .posts .posts-item .posts-item-date a, .posts-list .posts .posts-item .posts-item-date a:hover, .posts-list .posts .posts-item .posts-item-date a:visited {
         color: #93a1a1; }
+  .posts-list .posts .pagination {
+    font-weight: bold;
+    margin: 0.5em 0;
+    color: #eee8d5; }
+    .posts-list .posts .pagination a {
+      border: none; }

@@ -167,7 +167,7 @@ article.post {
   }
 
   .posts {
-    border-bottom: 1px dotted $base2;
+    border-top: 1px dotted $base2;
     padding-left: 0;
     margin: 0 0 2em 0;
     line-height: 1.75em;
@@ -175,7 +175,7 @@ article.post {
     .posts-item {
       margin: 0;
       padding: 3em 0;
-      border-top: 1px dotted $base2;
+      border-bottom: 1px dotted $base2;
       list-style: none;
 
       a, a:hover, a:visited { 
@@ -198,6 +198,16 @@ article.post {
         a, a:hover, a:visited {
           color: $base1;
         }
+      }
+    }
+
+    .pagination {
+      font-weight: bold;
+      margin: 0.5em 0;
+      color: $base2;
+
+      a {
+        border: none;
       }
     }
   }

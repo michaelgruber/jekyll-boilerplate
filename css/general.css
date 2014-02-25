@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 * {
   margin: 0;
   padding: 0; }
@@ -26,7 +27,6 @@ body > *:last-child {
 
 a, a:hover, a:visited {
   color: #586e75;
-  padding: 0.2em 0;
   border-bottom: 0.2em solid #eee8d5;
   text-decoration: none; }
 
