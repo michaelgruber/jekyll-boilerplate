@@ -1,0 +1,30 @@
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  {% include post_excerpt.html %}
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="previous">&#9664;</a>
+    {% else %}
+      <span>&#9664;</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span>&#8226;</span>
+      {% elsif page == 1 %}
+        <span><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">&#8226;</a></span>
+      {% else %}
+        <span><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" rel="Page {{ page }}">&#8226;</a></span>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <span><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" rel="next">&#9658;</a></span>
+    {% else %}
+      <span>&#9658;</span>
+    {% endif %}
+  </nav>
+{% endif %}

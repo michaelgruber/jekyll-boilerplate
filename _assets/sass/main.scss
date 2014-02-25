@@ -1,0 +1,215 @@
+@import "colors";
+@import "fonts";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+//
+// SITE
+//
+.site {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.meta {
+  color: $base1;
+}
+
+
+//
+// MEDIA QUERIES
+//
+@media (min-width: 1024px) {
+  html {
+    font-size: 70%;
+  }
+
+  .site {
+    width: 700px;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 55%;
+    p {
+      font-size: 115%;
+    }
+  }
+  .site {
+    width: 90%;
+  }
+}
+
+
+//
+// HEADER
+//
+.site-header, .site-nav {
+  a, a:hover, a:visited {
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+  }
+}
+
+.site-header {
+  .title {
+    display: inline-block;
+
+    a, a:visited {
+      color: $orange;
+    }
+
+    a:hover {
+      color: $base01;
+    }
+  }
+}
+
+
+//
+// NAV
+//
+.site-nav {
+  @include font-size(1.8);
+  height: 1.8em;
+
+  ul {
+    float: right;
+    display: block;
+    margin: 0.25em 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0;
+    }
+  }
+
+  a, a:visited {
+    color: $base1;
+    margin-left: 1em;
+  }
+
+  a:hover {
+    color: $base01;
+  }
+}
+
+
+//
+// FOOTER
+//
+footer {
+  color: $base0;
+  border-top: 4px solid $base2;
+  margin-top: 2em;
+  overflow: hidden;
+
+  .contact {
+    float: left;
+    margin-right: 3em;
+  }
+
+  .rss {
+    margin-top: 1.1em;
+    margin-right: -.2em;
+    float: right;
+
+    img {
+      border: 0;
+    }
+  }
+}
+
+//
+// CONTENT
+//
+.post-header, .page-header {
+  .post-title, .page-title {
+    margin: 0;
+    line-height: 100%;
+    @include font-size(4.8);
+  }
+
+  .post-subtitle {
+    margin: 0;
+    font-weight: normal;
+    @include font-size(2.4);
+    border: none;
+  }
+
+  .post-date {
+    @include font-size(1.4);
+    color: $base1;
+  }
+}
+
+article.post {
+  img { 
+    float: right;
+    max-width: 50%;
+    margin: 0.5em 0 0.5em 0.5em;
+  }
+}
+
+.intro > p:first-child { margin-top: 0; }
+
+.posts-list {
+  .posts-list-name {
+    border: none;
+    margin-bottom: 0;
+    @include font-size(3.2);
+  }
+
+  .posts {
+    border-top: 1px dotted $base2;
+    padding-left: 0;
+    margin: 0 0 2em 0;
+    line-height: 1.75em;
+
+    .posts-item {
+      margin: 0;
+      padding: 3em 0;
+      border-bottom: 1px dotted $base2;
+      list-style: none;
+
+      a, a:hover, a:visited { 
+        border: none;
+        color: $base01;
+      }
+
+      .posts-item-title {
+        border: none;
+        margin: 0;
+      }
+
+      .posts-item-excerpt {
+        margin: 0.5em 0;
+      }
+
+      .posts-item-date {
+        @include font-size(1.4);
+
+        a, a:hover, a:visited {
+          color: $base1;
+        }
+      }
+    }
+
+    .pagination {
+      font-weight: bold;
+      margin: 0.5em 0;
+      color: $base2;
+
+      a {
+        border: none;
+      }
+    }
+  }
+}
