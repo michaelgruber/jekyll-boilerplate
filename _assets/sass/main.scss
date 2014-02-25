@@ -133,6 +133,7 @@ footer {
 .post-header, .page-header {
   .post-title, .page-title {
     margin: 0;
+    line-height: 100%;
     @include font-size(4.8);
   }
 
