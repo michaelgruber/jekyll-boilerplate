@@ -1,24 +1,22 @@
 ---
 layout: page
 ---
-
 <section class="intro">
-    {{ content }}
+  {{ content }}
 </section>
 
-
 <section class="posts-list">
-    {% if page.list_name %}
-        <h2 class="posts-list-name">{{ page.list_name }}</h2>
-    {% endif %}
+  {% if page.list_name %}
+    <h2 class="posts-list-name">{{ page.list_name }}</h2>
+  {% endif %}
 
-    <ul class="posts">
-        {% if page.paginate %}
-          {% include paginated_posts.html %}
-        {% elsif page.category %}
-            {% include category_posts.html %}
-        {% else %}
-            {% include all_posts.html %}
-        {% endif %}
-    </ul>
+  <ul class="posts">
+    {% if page.paginate %}
+      {% include paginated_posts.html %}
+    {% elsif page.category %}
+      {% include category_posts.html %}
+    {% else %}
+      {% include all_posts.html %}
+    {% endif %}
+  </ul>
 </section>
