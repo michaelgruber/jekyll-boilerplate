@@ -11,13 +11,13 @@
     <meta name="viewport" content="width=device-width">
 
     <!-- Syntax highlighting CSS -->
-    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="{{ '/css/syntax.css' | prepend: site.baseurl | replace: '//', '/' }}">
 
     <!-- General styles -->
-    <link rel="stylesheet" href="/css/general.css">
+    <link rel="stylesheet" href="{{ '/css/general.css' | prepend: site.baseurl | replace: '//', '/' }}">
 
     <!-- Custom CSS and overrides -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ '/css/main.css' | prepend: site.baseurl | replace: '//', '/' }}">
   </head>
 
   <body>
@@ -25,7 +25,7 @@
       <nav class="site-nav" role="navigation">{% include navigation.html %}</nav>
 
       <header class="site-header">
-        <h1 class="title"><a href="/">{{ site.name }}</a></h1>
+        <h1 class="title"><a href="{{ '/index.html' | prepend: site.baseurl | replace: '//', '/' }}">{{ site.name }}</a></h1>
       </header>
 
       <div class="content">

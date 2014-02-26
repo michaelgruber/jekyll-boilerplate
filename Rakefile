@@ -16,7 +16,7 @@ namespace :watch do
   end
 
   task :jekyll do
-    system "bundle exec jekyll serve --watch"
+    system "bundle exec jekyll serve --watch --baseurl='/'"
   end
 end
 
