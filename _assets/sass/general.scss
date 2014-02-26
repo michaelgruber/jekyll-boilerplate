@@ -2,6 +2,7 @@
 @import "colors";
 @import "fonts";
 
+
 //
 // MIXINS
 //
@@ -10,6 +11,7 @@
   font-size: $sizeValue + rem;
 }
 
+
 //
 // GLOBAL RESET
 //
@@ -17,6 +19,7 @@
   margin: 0;
   padding: 0;
 }
+
 
 //
 // GENERAL
@@ -202,7 +205,7 @@ pre {
 
   code, tt {
     background-color: transparent;
-    border: none;    
+    border: none;
   }
 }
 

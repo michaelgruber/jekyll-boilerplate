@@ -3,3 +3,4 @@ markdown: redcarpet
 pygments: true
 exclude: [README.md, Gemfile, Gemfile.lock, Rakefile]
 paginate: 1
+baseurl: '/jekyll-boilerplate'
